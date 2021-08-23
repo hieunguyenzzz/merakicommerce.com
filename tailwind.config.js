@@ -20,19 +20,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'element-1': "#F7F5EF",
-        'element-2': "#FFFDFB",
-        'element-3': "#656D51",
-        'element-4': "#B4BA90",
-        'element-5': "#333333",
-        'element-6': "#faebd7",
-        'element-7': "#e5dfd6",
-        "element-8": "#fdf6f0",
+        primary: '#6f42c1',
+        secondary: '#656D51',
+        'element-1': "#232834",
+        'element-2': "#cbccc6",
+        'element-3': "#f29e74",
+        'element-4': "#9ef0f0",
+        'element-5': "#73d0ff",
+        'element-6': "#78a9ff",
+        'element-7': "#d4bfff",
+        "element-8": "#f06897",
         "element-9": "#e8e5dd",
-
       },
       fontFamily: {
-
+        'robo': ["Roboto Mono", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"],
       },
       boxShadow: {
       },
@@ -53,6 +54,9 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+    require('./tailwind/plugins/nestedGroup'),
+    require('./tailwind/plugins/responsive-typography'),
   ],
   variants: {
     extend: {

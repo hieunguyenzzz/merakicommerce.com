@@ -4,8 +4,8 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-          <Head>
-              <script
+        <Head>
+          {/* <script
                   async
                   src="https://www.googletagmanager.com/gtag/js?id=G-152J4BFGVX"
               />
@@ -20,8 +20,8 @@ export default class MyDocument extends Document {
                       gtag('config', 'G-152J4BFGVX');
             `,
                   }}
-              />
-          </Head>
+              /> */}
+        </Head>
         <body>
           <Main />
           <NextScript />

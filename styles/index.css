@@ -11,3 +11,18 @@
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
+
+:root {
+  /* header */
+  --header-height: 80px;
+
+  /* font siez */
+  --max-size: 16;
+  --min-size: 13;
+  --diff: calc(var(--max-size) - var(--min-size));
+  --responsive: calc(var(--min-size) * 1px + var(--diff) * (0.08333vw - 0.3px));
+
+  font-size: var(--responsive);
+
+  @apply lg:text-[16px];
+}
