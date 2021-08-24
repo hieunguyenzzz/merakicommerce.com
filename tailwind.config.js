@@ -18,6 +18,15 @@ module.exports = {
     },
   },
   theme: {
+    container: {
+      padding: {
+        DEFAULT: '1.4rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
     extend: {
       colors: {
         primary: '#6f42c1',
@@ -33,7 +42,8 @@ module.exports = {
         "element-9": "#e8e5dd",
       },
       fontFamily: {
-        'robo': ["Roboto Mono", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"],
+        'body': ["Roboto Mono", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"],
+        'heading': ['Abril Fatface', 'cursive']
       },
       boxShadow: {
       },
@@ -45,10 +55,14 @@ module.exports = {
       lineHeight: {
       },
       fontSize: {
+        'icon': '2em',
       },
       boxShadow: {
 
       },
+      minHeight: {
+        'fit': 'calc(100vh - var(--header-height))',
+      }
     },
 
   },
