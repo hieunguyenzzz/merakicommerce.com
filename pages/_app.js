@@ -1,3 +1,4 @@
+import { AppProvider } from '@components/app/context';
 import '../styles/index.css';
 
 function MyApp({ Component, pageProps }) {
@@ -6,7 +7,10 @@ function MyApp({ Component, pageProps }) {
   //   const C = withBuilderForm(Component.builderFormConfig)(Component)
   //   return <C {...pageProps} />
   // }
-  return <Component {...pageProps} />
+  return <AppProvider data={pageProps}>
+    <Component {...pageProps} />
+  </AppProvider>
 }
+
 
 export default MyApp

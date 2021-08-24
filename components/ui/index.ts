@@ -1,7 +1,7 @@
 // export { default as Accordion } from './Accordion'
 // export { default as Button } from './Button'
 export { default as Container } from './Container'
-export { useUI } from './context'
+// export { useUI } from './context'
 // export { default as LoadingDots } from './LoadingDots'
 // export { default as Modal } from './Modal'
 // export { default as Sidebar } from './Sidebar'

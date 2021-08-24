@@ -1,18 +1,18 @@
 .root {
-  @apply text-button border border-white border-opacity-50 bg-secondary px-md py-[15px] text-accents-1 cursor-pointer inline-flex transition ease-in-out duration-150 text-center justify-center items-center;
+  @apply text-button border border-white border-opacity-50 bg-secondary py-[15px] cursor-pointer inline-flex transition ease-in-out duration-150 text-center justify-center items-center;
 }
 .root.small {
   @apply px-[22px] py-[11px] text-[12px];
 }
 .root.secondary {
-  @apply bg-transparent text-secondary  border-secondary-2;
+  @apply bg-transparent text-secondary;
 }
 .root:hover {
-  @apply bg-primary text-accents-0 shadow-outline-normal hover:border-primary-2;
+  @apply bg-primary  hover:border-primary;
 }
 
 .root:focus {
-  @apply shadow-outline-normal outline-none ring-primary;
+  @apply outline-none ring-primary;
 }
 
 .root[data-active] {
@@ -20,7 +20,7 @@
 }
 
 .loading {
-  @apply bg-accents-1 text-accents-3 border-accents-2 cursor-not-allowed;
+  @apply cursor-not-allowed;
 }
 
 .slim {
@@ -29,7 +29,7 @@
 
 .disabled,
 .disabled:hover {
-  @apply text-accents-4 border-accents-2 bg-accents-1 cursor-not-allowed;
+  @apply cursor-not-allowed;
   filter: grayscale(1);
   -webkit-transform: translateZ(0);
   -webkit-perspective: 1000;

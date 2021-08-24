@@ -6,9 +6,7 @@ module.exports = {
   },
   images: {
     domains: [
-      'merakiweddingplanner.com',
-      'strapi.merakiweddingplanner.com',
-      'res.cloudinary.com'
+      'strapi.merakicommerce.com',
     ],
     deviceSizes: [640, 828, 1200, 1920],
   },
