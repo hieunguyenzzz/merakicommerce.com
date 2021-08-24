@@ -10,7 +10,8 @@
     "@tailwindcss/line-clamp": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
     "@vercel/fetch": "^6.1.1",
-    "classnames": "2.2.6",
+    "animate.css": "^4.1.1",
+    "classnames": "^2.3.1",
     "date-fns": "2.14.0",
     "dotenv": "^10.0.0",
     "eslint": "^7.28.0",
@@ -35,6 +36,7 @@
     "request": "^2.88.2",
     "serverless-mysql": "^1.5.4",
     "string-strip-html": "^8.3.0",
+    "tailwindcss-animatecss": "^1.0.7",
     "tinacms": "^0.41.0"
   },
   "devDependencies": {

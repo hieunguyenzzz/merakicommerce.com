@@ -8,6 +8,12 @@
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
+.animated {
+  -webkit-animation-duration: var(--animation-duration);
+  animation-duration: var(--animation-duration);
+  -webkit-animation-fill-mode: var(--animation-fill-mode);
+  animation-fill-mode: var(--animation-fill-mode);
+}
 
 /* Write you own custom component styles here */
 
@@ -24,12 +30,12 @@
 
   /* font size */
   --max-size: 16;
-  --min-size: 13;
+  --min-size: 14;
   --diff: calc(var(--max-size) - var(--min-size));
   --responsive: calc(var(--min-size) * 1px + var(--diff) * (0.08333vw - 0.3px));
 
   font-size: var(--responsive);
-  @apply lg:text-[16px];
+  @apply lg:text-[15.36px];
 
   /* font */
   --font-body: 'Roboto Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -40,9 +46,19 @@
 }
 
 html {
-  line-height: 1.15;
+  line-height: 1.8;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
+  color: #6c757d;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  line-height: 1.5;
 }

@@ -1,6 +1,5 @@
 .root {
   @apply text-button border border-white border-opacity-50 bg-secondary px-md py-[15px] text-accents-1 cursor-pointer inline-flex transition ease-in-out duration-150 text-center justify-center items-center;
-  font-family: 'Montserrat';
 }
 .root.small {
   @apply px-[22px] py-[11px] text-[12px];
