@@ -8,7 +8,7 @@ function Header() {
   return <header role="banner" className="z-40 relative">
     <nav className="bg-black text-white lg:bg-transparent group">
       <Container fluid className="container mx-auto flex flex-wrap justify-between py-3 lg:space-x-6 lg:h-header text-white">
-        <Link className="font-heading  py-2 text-2xl tracking-[.2em] flex items-center uppercase" href="index.html">Innova</Link>
+        <Link className="font-heading  py-2 text-2xl tracking-[.2em] flex items-center uppercase" href="/">Meraki</Link>
         <button className="lg:hidden text-4xl" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <Menu />
         </button>
@@ -71,7 +71,7 @@ function Footer() {
       <div className="">
         <div className="text-left md:text-center">
           <p>
-            Copyright ©2021 All rights reserved | This template is made with <span className="text-pink-400 text-xl"><Heart className="inline" /></span> by <a class="underline" href="https://colorlib.com" target="_blank">Colorlib</a>
+            Copyright ©2021 All rights reserved | This template is made with <span className="text-pink-400 text-xl"><Heart className="inline" /></span> by <a className="underline" href="/" target="_blank">Meraki</a>
           </p>
         </div>
       </div>
