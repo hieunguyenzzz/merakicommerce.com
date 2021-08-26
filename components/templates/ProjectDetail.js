@@ -36,7 +36,7 @@ function Portfolio() {
                             <h2 className="font-thin text-3xl font-heading mb-10">{get('current.name')}</h2>
                             <div className="whitespace-pre-line mb-5" dangerouslySetInnerHTML={{ __html: get('current.detail') }} ></div>
                             <div className="mt-10">
-                                <a target="_blank" href={get('current.website')} className="border-2 border-black font-bold text-black truncate text-center uppercase px-5 py-3 hover:text-white hover:bg-black transition-colors">Visit Website</a>
+                                <a rel="noreferrer" target="_blank" href={get('current.website')} className="border-2 border-black font-bold text-black truncate text-center uppercase px-5 py-3 hover:text-white hover:bg-black transition-colors">Visit Website</a>
                             </div>
                         </div>
                     </div>

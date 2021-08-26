@@ -17,8 +17,9 @@ export async function getStaticProps(config) {
 }
 
 export async function getStaticPaths() {
+  const projects = await fetch(process.env.API_URL + '/projects').then(res => res.json())
   return {
-    paths: [],
+    paths: projects.map(item => '/projects/' + item.slug),
     fallback: 'blocking',
   }
 }

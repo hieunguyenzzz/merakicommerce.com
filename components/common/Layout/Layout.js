@@ -46,32 +46,32 @@ function Footer() {
           <ul className="list-unstyled space-y-3">
             {
               get('global.menu.link', []).map((item, i) => {
-                return <li key={i}><a className="underline hover:text-primary" href={item.location || "#"}>{item.title}</a></li>
+                return <li key={i}><Link className="underline hover:text-primary" href={item.location || "#"}>{item.title}</Link></li>
               })
             }
           </ul>
         </div>
         <div className="col-span-2 flex  mb-12">
           <ul className="list-unstyled flex w-full space-x-3 items-baseline">
-            <li><a href="#" className="p-2 flex items-center hover:text-primary">
+            <li><Link href="/" className="p-2 flex items-center hover:text-primary">
               <Twitter />
-            </a></li>
-            <li><a href="#" className="p-2 flex items-center hover:text-primary">
+            </Link></li>
+            <li><Link href="/" className="p-2 flex items-center hover:text-primary">
               <Facebook />
-            </a></li>
-            <li><a href="#" className="p-2 flex items-center hover:text-primary">
+            </Link></li>
+            <li><Link href="/" className="p-2 flex items-center hover:text-primary">
               <Linkin />
-            </a></li>
-            <li><a href="#" className="p-2 flex items-center hover:text-primary">
+            </Link></li>
+            <li><Link href="/" className="p-2 flex items-center hover:text-primary">
               <Instagram />
-            </a></li>
+            </Link></li>
           </ul>
         </div>
       </div>
       <div className="">
         <div className="text-left md:text-center">
           <p>
-            Copyright ©2021 All rights reserved | This template is made with <span className="text-pink-400 text-xl"><Heart className="inline" /></span> by <a className="underline" href="/" target="_blank">Meraki</a>
+            Copyright ©2021 All rights reserved | This template is made with <span className="text-pink-400 text-xl"><Heart className="inline" /></span> by <Link className="underline" href="/" rel="noreferrer" >Meraki</Link>
           </p>
         </div>
       </div>
