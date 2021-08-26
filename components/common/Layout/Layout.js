@@ -1,7 +1,7 @@
 import { useGetDataApp } from '@components/app/context'
+import Container from '@components/common/Container'
+import Link from '@components/common/Link'
 import { Facebook, Heart, Instagram, Linkin, Menu, Twitter } from '@components/icons'
-import { Container } from '@components/ui'
-import Link from '@components/ui/Link'
 import React from 'react'
 function Header() {
   const get = useGetDataApp()

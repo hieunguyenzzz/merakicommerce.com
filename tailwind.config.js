@@ -57,9 +57,6 @@ module.exports = {
       fontSize: {
         'icon': '2em',
       },
-      boxShadow: {
-
-      },
       minHeight: {
         'fit': 'calc(100vh - var(--header-height))',
       }
