@@ -53,18 +53,27 @@ function Footer() {
         </div>
         <div className="col-span-2 flex  mb-12">
           <ul className="list-unstyled flex w-full space-x-3 items-baseline">
-            <li><Link href="/" className="p-2 flex items-center hover:text-primary">
-              <Twitter />
-            </Link></li>
-            <li><Link href="/" className="p-2 flex items-center hover:text-primary">
-              <Facebook />
-            </Link></li>
-            <li><Link href="/" className="p-2 flex items-center hover:text-primary">
-              <Linkin />
-            </Link></li>
-            <li><Link href="/" className="p-2 flex items-center hover:text-primary">
-              <Instagram />
-            </Link></li>
+            {
+              get('global.social.social_item', []).map((item, i) => {
+                if (item.url.includes('facebook'))
+                  return <li key={i}><Link href={item.url} className="p-2 flex items-center hover:text-primary">
+                    <Facebook />
+                  </Link></li>
+                if (item.url.includes('twitter'))
+                  return <li key={i}><Link href={item.url} className="p-2 flex items-center hover:text-primary">
+                    <Twitter />
+                  </Link></li>
+                if (item.url.includes('linkin'))
+                  return <li key={i}><Link href={item.url} className="p-2 flex items-center hover:text-primary">
+                    <Linkin />
+                  </Link></li>
+                if (item.url.includes('instagram'))
+                  return <li key={i}><Link href={item.url} className="p-2 flex items-center hover:text-primary">
+                    <Instagram />
+                  </Link></li>
+                return null
+              })
+            }
           </ul>
         </div>
       </div>
