@@ -3,15 +3,16 @@ import Image from '@components/common/Image';
 import React, { useEffect, useRef, useState } from 'react';
 
 export function Hero({ banner, title, children } = {}) {
-  const [backgrounHeight, setBackgrounHeight] = useState('100%');
+  const [top, setTop] = useState('0');
   const containerRef = useRef();
   const backgroundRef = useRef();
   useEffect(() => {
-    const handleScroll = (e) => {
+    const handleScroll = ((timestamp) => {
       const containerClientRect = containerRef.current.getBoundingClientRect();
-      const backgrounHeight = Math.max(Math.min(containerClientRect.height + containerClientRect.top, containerClientRect.height), 0);
-      setBackgrounHeight(backgrounHeight + 'px');
-    };
+      const backgrounHeight = -Math.floor(containerClientRect.top / 2);
+      setTop(backgrounHeight + 'px');
+      window.requestAnimationFrame(handleScroll);
+    });
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -19,10 +20,10 @@ export function Hero({ banner, title, children } = {}) {
   }, []);
   return <div
     style={{
-      "--backgroundHeight": backgrounHeight
+      "--backgroundHeight": top
     }}
     ref={containerRef} className="h-screen -mt-header relative  overflow-hidden">
-    <div ref={backgroundRef} className='absolute bottom-0 h-[var(--backgroundHeight)] left-0 w-full flex items-center z-[-1]'>
+    <div ref={backgroundRef} className='absolute bottom-0 transform translate-y-[var(--backgroundHeight)] left-0 w-full flex items-center z-[-1] transition-all duration-[30ms]'>
       <div className='relative w-full h-screen'>
         <Image className="z-[-1] bg-gray-200 brightness-75 object-cover" image={banner} provider="strapi" />
       </div>
