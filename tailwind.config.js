@@ -68,6 +68,7 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
     require('./tailwind/plugins/nestedGroup'),
     require('./tailwind/plugins/responsive-typography'),
+    require('@tailwindcss/forms'),
     require('tailwindcss-animatecss')({
       classes: ['animate__animated', 'animate__fadeIn', 'animate__bounceIn', 'animate__fadeInUp'],
       settings: {},

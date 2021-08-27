@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/line-clamp": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
     "classnames": "^2.3.1",
