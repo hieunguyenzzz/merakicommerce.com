@@ -2,6 +2,7 @@ import { useGetDataApp } from '@components/app/context'
 import Container from '@components/common/Container'
 import Image from '@components/common/Image'
 import Layout from '@components/common/Layout'
+import Link from '@components/common/Link'
 import { Featered } from "@sections/Featered"
 import { Hero } from '@sections/Hero'
 import { Slider } from "@sections/Slider"
@@ -31,13 +32,13 @@ function Index() {
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 py-12">
             {
               get('current.feature_projects', []).map((item, i) => {
-                return <a key={i} href="#" className="w-full h-[400px] relative group">
+                return <Link key={i} href={"/projects/" + item.slug} className="w-full h-[400px] relative group">
                   <Image provider="strapi" image={item.thumbnail} className="brightness-50 lg:brightness-100 lg:group-hover:brightness-50 transition-all z-[-1] object-cover" />
                   <div className="h-full flex justify-center items-center flex-col lg:opacity-0 lg:m-6 transition-all group-hover:opacity-100 group-hover:mt-0 duration-500">
                     <h3 className="text-2xl font-heading mb-2 text-white">{item.name}</h3>
                     <p className="text-white text-opacity-50">{item.detail}</p>
                   </div>
-                </a>
+                </Link>
               })
             }
           </div>
@@ -65,7 +66,7 @@ function Index() {
               <h2 className="font-thin text-3xl font-heading mb-10">Creative We Grow</h2>
               <p className="mb-5">{get('current.about_us.about_us')}</p>
               <div className="flex-1" />
-              <p className="mt-10"><a href="/about_us" className="border-2 border-black font-bold text-black truncate text-center uppercase px-5 py-3 hover:text-white hover:bg-black transition-colors">Learn More</a></p>
+              <p className="mt-10"><Link href="/about_us" className="border-2 border-black font-bold text-black truncate text-center uppercase px-5 py-3 hover:text-white hover:bg-black transition-colors">Learn More</Link></p>
             </div>
           </div>
         </Container>
@@ -77,7 +78,7 @@ function Index() {
               <h3 className="text-white text-3xl font-heading mb-2">Get Started</h3>
               <div className="text-white mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
               <div className="block" >
-                <a href="/contact" className="inline-block border-2 bg-transparent hover:border-white hover:bg-white font-bold hover:text-black truncate text-center uppercase px-8 py-3 text-white bg-black transition-colors">Get In Touch!</a>
+                <Link href="/contact" className="inline-block border-2 bg-transparent hover:border-white hover:bg-white font-bold hover:text-black truncate text-center uppercase px-8 py-3 text-white bg-black transition-colors">Get In Touch!</Link>
               </div>
             </div>
           </div>

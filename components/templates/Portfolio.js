@@ -35,7 +35,7 @@ function Portfolio() {
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 py-12">
                   {
                     get('homepage.feature_projects', []).map((item, i) => {
-                      return <a key={i} href={"/projects/" + item.slug} {...{
+                      return <Link key={i} href={"/projects/" + item.slug} {...{
                         ...createProps(2 + i, "w-full h-[400px] relative group")
                       }} >
                         <Image provider="strapi" image={item.thumbnail} className="brightness-50 lg:brightness-100 lg:group-hover:brightness-50 transition-all z-[-1] object-cover" />
@@ -43,7 +43,7 @@ function Portfolio() {
                           <h3 className="text-2xl font-heading mb-2 text-white">{item.name}</h3>
                           <p className="text-white text-opacity-50">{item.detail}</p>
                         </div>
-                      </a>
+                      </Link>
                     })
                   }
                 </div>
